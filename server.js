@@ -56,14 +56,6 @@ app.put('/image', (req, res) => {image.handleImage(req, res, db)});
 
 app.post('/imageUrl', (req, res) => {image.handleApiCall(req, res)});
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log("app is running");
 })
-
-/*
-/ --> res = this is working
-/signin --> POST = success/fail
-/register --> POST = user
-/profile/:userId --> GET = user
-/image --> PUT --> USER
-*/
